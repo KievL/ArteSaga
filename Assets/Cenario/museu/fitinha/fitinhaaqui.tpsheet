@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:677ef997d051f256f63816a43d84de4c:449691dd03fa9c3612af52401abbd842:e785d9d40f3df0a833bcbd2a1b93a4de$
+#
+:format=40300
+:texture=fitinhaaqui.png
+:size=128x64
+:normalmap=fitinhaaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+fitinha;1;7;78;56; 0.5;0.5714285714285714; 0;0;0;0; 8;78;1;61;1;49;40;30;39;18;1;0;0;6;56;78;56; 6;3;4;5;3;5;6;2;6;7;2;3;6;0;2;7;0;1;2

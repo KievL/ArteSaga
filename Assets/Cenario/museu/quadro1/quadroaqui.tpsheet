@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:c50219ff3044a6184fbdaa943720fc78:b563dbb445b82a3f90534c2cbb06577f:ce7913dd1d950b1e0161129717242cae$
+#
+:format=40300
+:texture=quadroaqui.png
+:size=256x128
+:normalmap=quadroaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+quadro;1;53;132;74; 0.49242424242424243;0.4864864864864865; 0;0;0;0; 4;132;0;0;0;0;74;132;74; 2;1;2;3;0;1;3

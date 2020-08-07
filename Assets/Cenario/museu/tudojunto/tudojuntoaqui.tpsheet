@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:3a48f453a939e5a0fbaaa90b3568bf26:530633d03aa82726d3ab7b65b8647f95:b1e881315fc94d114d3ca94f7dd6963e$
+#
+:format=40300
+:texture=tudojuntoaqui.png
+:size=512x256
+:normalmap=tudojuntoaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+tudojunto;1;103;293;152; 0.47440273037542663;0.5394736842105263; 0;0;0;0; 13;250;0;234;0;234;3;250;3;221;140;260;121;293;63;293;12;1;12;0;63;24;104;69;141;146;152; 9;1;2;3;0;1;3;8;11;12;8;10;11;8;9;10;7;8;12;4;6;7;4;5;6;4;7;12

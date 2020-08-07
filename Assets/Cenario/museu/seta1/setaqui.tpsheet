@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:65cc484389c04a5c7bb32b08ffdcf7c7:e01f6b319aaacfeb7aa69f7df8c84afe:b92027d92df7f3061f070dc1d0659a1c$
+#
+:format=40300
+:texture=setaqui.png
+:size=64x64
+:normalmap=setaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+seta1;1;26;50;37; 0.48;0.5405405405405406; 0;0;0;0; 4;50;0;0;15;0;37;50;37; 2;1;2;3;0;1;3

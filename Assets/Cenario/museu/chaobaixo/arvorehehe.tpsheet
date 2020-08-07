@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:34215405f8a2b5955f9ca7ae59d7aa9e:4a27afeb689353a53ad3a2c7ca76cbf6:d7d13439ff9b26ff362999e53b12083d$
+#
+:format=40300
+:texture=arvorehehe.png
+:size=128x128
+:normalmap=arvorehehe_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+chao;1;50;77;77; 0.4935064935064935;0.5064935064935066; 0;0;0;0; 4;77;0;0;0;0;77;77;77; 2;1;2;3;0;1;3

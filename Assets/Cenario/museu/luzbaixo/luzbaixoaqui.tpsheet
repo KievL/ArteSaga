@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:c248df6b5c9eec33f1f8de1d721ee45a:d9f44ccddcbc1ed25d1dfea28d90b4c2:330015b9e4b0d9ffa6739a9d02b4366e$
+#
+:format=40300
+:texture=luzbaixoaqui.png
+:size=64x32
+:normalmap=luzbaixoaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+luzbaixo;1;6;43;25; 0.4883720930232558;0.56; 0;0;0;0; 4;43;0;0;0;0;25;43;25; 2;1;2;3;0;1;3

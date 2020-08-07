@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:036b6b718636ff928d8959da67d02b1c:94f7d7a7432ce0b136692a90bd91b882:c5317c6dda582c04d348279d1ae9fc52$
+#
+:format=40300
+:texture=balcaoaqui.png
+:size=256x128
+:normalmap=balcaoaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+balcao;1;45;249;82; 0.4939759036144578;0.7195121951219512; 0;0;0;0; 11;78;61;249;62;246;0;195;0;191;21;155;17;155;0;0;0;0;61;31;82;74;82; 9;0;9;10;8;0;7;0;5;6;0;1;4;2;3;4;1;2;4;0;4;5;0;6;7;8;9;0

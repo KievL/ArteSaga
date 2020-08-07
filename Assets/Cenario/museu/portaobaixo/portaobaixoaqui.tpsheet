@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:8f1b972833363da8c5051ea9b006173f:0374c146f4e4e0e2d034dde9352f099c:f8cb9ab92ab181b121bfbadb6368450d$
+#
+:format=40300
+:texture=portaobaixoaqui.png
+:size=512x256
+:normalmap=portaobaixoaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+portaobaixo;1;115;293;140; 0.4880546075085324;0.3285714285714286; 0;0;0;0; 9;221;128;260;109;293;51;293;0;1;0;0;51;24;92;69;129;146;140; 7;4;7;8;4;6;7;4;5;6;3;4;8;0;2;3;0;1;2;0;3;8

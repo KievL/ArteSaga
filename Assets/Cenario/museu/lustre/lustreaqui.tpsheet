@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:023541ffd223bc4664c82b4a509bc3fd:74fcf1ac20f5979cc5490b197b06482e:ab819664e126a7ec9d640fa4f81fed35$
+#
+:format=40300
+:texture=lustreaqui.png
+:size=128x256
+:normalmap=lustreaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+lustre;1;127;95;128; 0.4842105263157895;0.5; 0;0;0;0; 13;36;56;63;60;63;128;69;128;72;65;95;53;95;1;13;0;0;24;0;54;26;59;26;128;32;128; 11;10;11;12;8;9;10;0;8;10;0;6;7;1;5;6;2;3;4;1;2;4;1;4;5;0;1;6;10;12;0;0;7;8

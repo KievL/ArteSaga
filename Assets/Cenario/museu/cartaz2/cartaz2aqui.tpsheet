@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:c7449b5e4b1a19702bcecef07e95a8aa:f73290bffc585eef11641f1931d79c63:2c4c4664e8f01283273326f906c76006$
+#
+:format=40300
+:texture=cartaz2aqui.png
+:size=128x128
+:normalmap=cartaz2aqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+cartaz2;1;30;70;97; 0.4857142857142857;0.4948453608247423; 0;0;0;0; 4;70;0;0;0;0;97;70;97; 2;1;2;3;0;1;3

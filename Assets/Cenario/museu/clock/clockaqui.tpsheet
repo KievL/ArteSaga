@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:9e3e254dc191f11891efb3fb9b9b9272:d14c4cab95dec48436129883168f9248:0a45a479a8d781c2c7e2f0163a3e21ae$
+#
+:format=40300
+:texture=clockaqui.png
+:size=64x64
+:normalmap=clockaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+clock;1;5;58;58; 0.4482758620689655;0.4655172413793104; 0;0;0;0; 4;58;0;0;0;0;58;58;58; 2;1;2;3;0;1;3

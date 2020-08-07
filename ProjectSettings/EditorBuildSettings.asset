@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Cenario/MenuInicial/Menu.unity
+    guid: a3f3c5b30ad9f024cbae37e5de457a19
+  - enabled: 1
+    path: Assets/Cenario/museu/Museu.unity
+    guid: 8c57f5a24dc9914458a2ee01cc3e021f
+  - enabled: 1
+    path: Assets/Cenario/salaPortais/SalaPortais.unity
+    guid: 68e1e29fdd32e8e4bb46a0d32dd69c0b
+  - enabled: 1
+    path: Assets/Cenario/prehitoria/prehistoria.unity
+    guid: 9cab1bb873dfb5443834785222ccb521
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleolitico.unity
+    guid: 74c0f1953d634244a80afeee6dc2481d
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleo4/Paleo4.unity
+    guid: 3b8a5f00b36d8224885280158cf07789
+  - enabled: 1
+    path: Assets/Cenario/neolitico/neoli5/Neoli5.unity
+    guid: c310b1bbf0323e44d9d8745a2bfe7a53
+  - enabled: 0
+    path: Assets/Cenario/Paleo4/Paleo4.unity
+    guid: dae0917a772da15409b6ce87fb4dd401
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleo4/throwArrowScene.unity
+    guid: 2f8528ad5e280f24087c3eafa90fb9c9
+  - enabled: 1
+    path: Assets/Cenario/neolitico/neoli4/neoli4.unity
+    guid: bc4e329739a9e76488f9ec9fe99692bf
+  - enabled: 1
+    path: Assets/Cenario/metais/metal1/metal1.unity
+    guid: 3876078cc5418b54399e323bbb0f6b1f
+  - enabled: 1
+    path: Assets/Cenario/metais/metal2/metal2.unity
+    guid: 1b853a5a042d528418eba9476158ccc9
+  - enabled: 1
+    path: Assets/Cenario/metais/metal3/metal3.unity
+    guid: cf7403947d5e72b438b44a6959a99f14
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleo6/Paleo6.unity
+    guid: ea8116a3b35270d4e8a3e5ec8459d93d
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleo7/Paleo7.unity
+    guid: 31c0b0ab411a9524090f5e52dd3c1129
+  - enabled: 1
+    path: Assets/Cenario/neolitico/neoli1/neoli1.unity
+    guid: bece17077a92b5346bc4c6e9836747a2
+  - enabled: 1
+    path: Assets/Cenario/neolitico/neoli3/neoli3.unity
+    guid: d57a363fabd24e1489b9381b9ff3ff78
+  - enabled: 1
+    path: Assets/Cenario/neolitico/neoli2/neoli2.unity
+    guid: a74b93fc414e58848b6d0b755298ec33
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/Paleo2/Paleo2.unity
+    guid: 880759eb9500e074494868f9e15f48ee
+  - enabled: 1
+    path: Assets/Cenario/paleolitico/venus/fazerVenus.unity
+    guid: fa806d2fc8c007741bce60fbd45de472
+  m_configObjects: {}

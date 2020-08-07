@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:ad19696fc2385ea2215fe977ee82882e:a361a6727095d1cf0999a0c66d86c44d:9619f994f14684f77794d17517e78b42$
+#
+:format=40300
+:texture=luzcimaaqui.png
+:size=32x32
+:normalmap=luzcimaaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+luzcima;1;14;18;17; 0.5;0.5294117647058824; 0;0;0;0; 4;15;0;0;0;0;17;18;17; 2;0;2;3;0;1;2

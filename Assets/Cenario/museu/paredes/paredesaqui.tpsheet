@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:72a9cebec8dba707bdbf9c6a85e1edf8:af2e6bf96274b0d50816102e459f5fc3:643e4299db23a55425ee9df35ea8579f$
+#
+:format=40300
+:texture=paredesaqui.png
+:size=256x256
+:normalmap=paredesaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+paredes;1;82;189;173; 0.5079365079365079;0.5086705202312138; 0;0;0;0; 4;189;0;0;0;0;173;189;173; 2;1;2;3;0;1;3

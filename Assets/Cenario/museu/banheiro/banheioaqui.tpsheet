@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:78c2170473a571027949258fd697d45d:a4d9887af250916e2d66a931c6bda1ce:d874ca70a8f71d0dde743cfc98c38457$
+#
+:format=40300
+:texture=banheioaqui.png
+:size=128x128
+:normalmap=banheioaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+banheiro;1;33;120;94; 0.48333333333333334;0.4787234042553191; 0;0;0;0; 12;73;81;120;81;120;0;72;0;70;70;48;68;48;0;0;0;0;81;50;83;50;94;71;94; 10;9;10;11;5;8;9;5;6;7;5;7;8;0;9;11;4;5;9;4;2;3;4;1;2;4;0;1;0;4;9

@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:76f8670f47babea182640900cc5e71dd:b1625a9f647dc25bcd50bb1a0d50554a:4ce3383126735b6356c5ff0f4afc3672$
+#
+:format=40300
+:texture=portaqui.png
+:size=512x512
+:normalmap=portaqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+porta;1;184;284;327; 0.5;0.654434250764526; 0;0;0;0; 13;84;301;192;299;194;327;268;327;268;305;258;294;258;26;284;0;3;2;18;35;18;290;0;327;84;327; 11;10;11;12;0;10;12;6;7;8;6;8;9;1;5;6;5;1;2;5;2;3;5;3;4;1;6;9;0;1;9;0;9;10

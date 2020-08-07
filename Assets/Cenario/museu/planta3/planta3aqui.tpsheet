@@ -1,0 +1,17 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:3b750d16bf189c6ad685f12cb30237f8:72f6e971bf7600f1846f5c48011f2c5e:603d15caa9541da02a49ce6d7f9e25f2$
+#
+:format=40300
+:texture=planta3aqui.png
+:size=128x128
+:normalmap=planta3aqui_n.png
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+planta3;1;39;88;88; 0.6136363636363636;0.4772727272727273; 0;0;0;0; 5;88;46;77;0;34;0;0;76;82;88; 3;0;3;4;0;2;3;0;1;2
