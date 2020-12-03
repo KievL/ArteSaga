@@ -9,6 +9,7 @@ public class SalaPortaisManager : MonoBehaviour
     public GameObject botaoEntrar;
     public GameObject pablo;
     public int portal = 0;
+    public int porta2 = 0;
     public GameObject painelFinal;
     public float crono = 0;
     public bool mudarCena = false;
@@ -21,6 +22,10 @@ public class SalaPortaisManager : MonoBehaviour
     public bool xCheck = false;
     public bool yCheck = false;
     public bool ortCheck = false;
+
+    public GameObject textPreHist;   
+    public GameObject textIdadeAntiga;
+
 
     public GameObject fala;
     // Start is called before the first frame update
@@ -118,21 +123,39 @@ public class SalaPortaisManager : MonoBehaviour
         {
             botaoEntrar.SetActive(true);
 
+        }       
+        else if (porta2 != 0)
+        {
+            botaoEntrar.SetActive(true);
+
         }
         else
         {
             botaoEntrar.SetActive(false);
-        }
+        }  
+        
     }
     void EmQualPortal()
     {
         if(pablo.transform.position.x >= -1.351f && pablo.transform.position.x <= -0.808f)
         {
+            textPreHist.SetActive(true);
             portal = 1;
         }
         else
         {
+            textPreHist.SetActive(false);
             portal = 0;
+        }
+        if (pablo.transform.position.x >= -0.029f && pablo.transform.position.x <= 0.523f)
+        {
+            textIdadeAntiga.SetActive(true);
+            porta2 = 1;
+        }
+        else
+        {
+            textIdadeAntiga.SetActive(false);
+            porta2 = 0;
         }
     }
     void MudarCenario()
@@ -146,12 +169,26 @@ public class SalaPortaisManager : MonoBehaviour
                 SceneManager.LoadScene("prehistoria");
             }
         }
+
+        if (mudarCena == true && porta2 == 1)
+        {
+            painelFinal.SetActive(true);
+            crono += Time.deltaTime;
+            if (crono >= 1f)
+            {
+                SceneManager.LoadScene("idadeantiga");
+            }
+        }
     }
     public void EntrarSala()
     {
         if(portal == 1)
         {
             mudarCena = true;            
+        }
+        if (porta2 == 1)
+        {
+            mudarCena = true;
         }
     }
     public void ApertarFala()
