@@ -43,6 +43,15 @@ public class SalaPortaisManager : MonoBehaviour
             SceneStep = 1;
             PlayerPrefs.SetInt("dentroPreHist", 1);
         }
+        if (PlayerPrefs.GetInt("dentroPreHist") == 3)
+        {
+            camera1.transform.position = new Vector3(0.1620926f, -0.466f, camera1.transform.position.z);
+            camera1.GetComponent<Camera>().orthographicSize = 0.4006618f;
+            pablo.transform.position = new Vector2(0.1987996f, -0.498f);
+            pablo.GetComponent<SpriteRenderer>().flipX = true;
+            SceneStep = 1;
+            PlayerPrefs.SetInt("dentroPreHist", 1);
+        }
     }
 
     // Update is called once per frame

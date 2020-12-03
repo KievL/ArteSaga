@@ -40,7 +40,7 @@ public class pabloGeral : MonoBehaviour
             elPablo.GetComponent<SpriteRenderer>().flipX = true;
             elPablo.GetComponent<Animator>().SetBool("correndo", true);
         }
-        if(position == 0)
+        if(position == 0 && liberado==true)
         {
             elPablo.GetComponent<Animator>().SetBool("correndo", false);
             elPablo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
