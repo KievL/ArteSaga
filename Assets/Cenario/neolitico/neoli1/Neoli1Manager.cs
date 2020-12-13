@@ -15,7 +15,11 @@ public class Neoli1Manager : MonoBehaviour
     public GameObject pablo;
     public GameObject falaHomem;
     public int falasStep = 0;
-    public GameObject help;
+    public GameObject helpPegarMadeira;
+    public GameObject helpConstruir;
+    public GameObject helpPegarMadeiraClick;
+    public GameObject helpConstruirClick;
+    public bool helpsAtivos = false;
     public int madeiraMax;
     public static int madeirasStatic = 0;
     public int madeiras;
@@ -104,7 +108,6 @@ public class Neoli1Manager : MonoBehaviour
         btnTree1.SetActive(false);
         btnTree2.SetActive(false);
         btnTree3.SetActive(false);
-        help.SetActive(false);
         btnQuebrar.SetActive(false);
         woodIcon.SetActive(false);
         textWoo2GO.SetActive(false);
@@ -145,6 +148,7 @@ public class Neoli1Manager : MonoBehaviour
         urso();
         finalStep();
         hitt();
+        aparecerHelps();
         if(quebrando1 == false && quebrando2 == false && quebrando3 == false && quebrando4 == false)
         {
             camera1.transform.eulerAngles = new Vector3(camera1.transform.eulerAngles.x, camera1.transform.eulerAngles.y, 0);  
@@ -207,10 +211,10 @@ public class Neoli1Manager : MonoBehaviour
         {           
             pabloAndar.resolver = true;
             getMadeira = true;
-            help.SetActive(true);
             moveCanvas.SetActive(true);
             woodIcon.SetActive(true);
             textWoo2GO.SetActive(true);
+            helpsAtivos = true;
             sceneStep = 8;
 
         }
@@ -593,7 +597,6 @@ public class Neoli1Manager : MonoBehaviour
         }
         if(terminouCasa == true && sceneStep == 8)
         {
-            help.SetActive(false);
             hmFalaDois.SetActive(true);
             moveCanvas.SetActive(false);
             pabloNeo1B.playable = false;
@@ -671,5 +674,53 @@ public class Neoli1Manager : MonoBehaviour
     public void mudarFala2()
     {
         falaStep++;
+    }
+    void aparecerHelps()
+    {
+        if (helpsAtivos == true && terminouCasa==false)
+        {
+            if(quebrando1 ==true || quebrando2==true|| quebrando3==true || quebrando4 == true)
+            {
+                helpConstruir.SetActive(false);
+                helpConstruirClick.SetActive(false);
+                helpPegarMadeira.SetActive(false);
+                helpPegarMadeiraClick.SetActive(true);
+            }
+            if(woodBuildHouse==4 && building == false)
+            {
+                helpConstruir.SetActive(true);
+                helpConstruirClick.SetActive(false);
+                helpPegarMadeira.SetActive(false);
+                helpPegarMadeiraClick.SetActive(false);
+            }
+            if (building == true)
+            {
+                helpConstruir.SetActive(false);
+                helpConstruirClick.SetActive(true);
+                helpPegarMadeira.SetActive(false);
+                helpPegarMadeiraClick.SetActive(false);
+            }
+            if (woodBuildHouse == 0 && quebrando1 == false && quebrando2 == false && quebrando3 == false && quebrando4 == false)
+            {
+                Debug.Log("oi1");
+                helpConstruir.SetActive(false);
+                helpConstruirClick.SetActive(false);
+                helpPegarMadeira.SetActive(true);
+                helpPegarMadeiraClick.SetActive(false);
+            }
+            if (terminouCasa == true)
+            {
+                helpsAtivos = false;
+            }
+            Debug.Log("oi3");
+        }
+        else
+        {
+            Debug.Log("oi");
+            helpConstruir.SetActive(false);
+            helpConstruirClick.SetActive(false);
+            helpPegarMadeira.SetActive(false);
+            helpPegarMadeiraClick.SetActive(false);
+        }
     }
 }

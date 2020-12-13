@@ -10,7 +10,8 @@ public class PaleoManager : MonoBehaviour
     public float crono2 = 0;
     public float crono3 = 0;
     public float crono4 = 0;
-    public bool podeObservar = true;
+    public float crono5 = 0;
+    public bool podeObservar = false;
     public Transform aguia;
     public GameObject pablo;
     public Transform aguia2;
@@ -21,11 +22,30 @@ public class PaleoManager : MonoBehaviour
     public int aguasCheck = 0;
     public GameObject tutoTxt;
     public bool txtAtiv = false;
+    public bool pularCena1 = false;
     // Start is called before the first frame update
     void Start()
     {
         tutoTxt.SetActive(false);
-        Observar();
+        if(PlayerPrefs.GetInt("tutorialPaleo1")==0)
+        {
+            podeObservar = true;
+            
+        }
+        else
+        {
+            pularCena1 = true;
+            pablo.GetComponent<Animator>().SetBool("pularCenaCorrer", true);
+            pablo.GetComponent<Animator>().SetBool("olhar", false);
+            aguia.transform.position = new Vector2(this.transform.position.x, 1.298f);
+            aguia2.transform.position = new Vector2(this.transform.position.x, 1.4f);
+            primitivoBehaviour.pularLiberado = true;
+            pablo.transform.position = new Vector3(0, -0.197f, 0);
+            podeObservar = false;
+
+
+        }
+        
     }
 
     // Update is called once per frame
@@ -35,6 +55,7 @@ public class PaleoManager : MonoBehaviour
         Observar();
         correndo();
         aguiaDois();
+
         if (aguasPasssadas >= SpawnAguiaCima.maxInter + SpawnAguiaBaixo.maxInter)
         {
             primitivoBehaviour.ganhou = true;
@@ -46,6 +67,7 @@ public class PaleoManager : MonoBehaviour
             PlayerPrefs.Save();
             SceneManager.LoadScene("Paleo2");
         }
+        pulandoCena();
     }
 
     void Observar()
@@ -96,7 +118,7 @@ public class PaleoManager : MonoBehaviour
         if(correr == true)
         {
             pablo.transform.Translate(new Vector2(0.8f, 0)*Time.deltaTime);
-            if(pablo.transform.position.x >= 2.184)
+            if(pablo.transform.position.x >= 2.357f)
             {                
                 aguiaVoar = true;
 
@@ -109,7 +131,7 @@ public class PaleoManager : MonoBehaviour
         if(aguiaVoar == true)
         {
             aguia2.transform.Translate(new Vector2(0.95f, 0)* Time.deltaTime);
-            if(aguia2.position.x >= 1.75f)
+            if(aguia2.position.x >= 2.357f)
             {
                 if(txtAtiv == false)
                 {
@@ -131,5 +153,36 @@ public class PaleoManager : MonoBehaviour
             }
         }
     }
-    
+    void pulandoCena()
+    {
+       
+        if (pularCena1 == true)
+        {
+            
+            if (txtAtiv == false)
+            {
+                tutoTxt.SetActive(true);
+                txtAtiv = true;
+            }
+            crono5 += Time.deltaTime;
+            if (crono5 > 2f)
+            {
+
+                aguiaNascer = true;
+                aguiaVoar = false;
+                primitivoBehaviour.pularLiberado = true;
+
+            }
+
+            isCorrendo = true;
+            
+        }
+    }
+    public void sairAguia()
+    {
+        
+        PlayerPrefs.SetInt("saidaPrehist", 1);
+        SceneManager.LoadScene("prehistoria");
+        Time.timeScale = 1f;
+    }
 }

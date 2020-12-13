@@ -76,6 +76,8 @@ public class bookBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CanvasLivro.SetActive(false);
+        btnAbrirLivro.SetActive(true);
     }
 
     // Update is called once per frame
@@ -343,7 +345,7 @@ public class bookBehavior : MonoBehaviour
         CanvasLivro.SetActive(false);
         btnAbrirLivro.SetActive(true);
 
-    }
+    }   
 
 
 }

@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929041, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: btnAbrirLivro
+      value: 
+      objectReference: {fileID: 1689371417}
     - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,26 +303,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5800824177862929041, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
-        type: 3}
-      propertyPath: btnAbrirLivro
-      value: 
-      objectReference: {fileID: 1689371417}
     - target: {fileID: 5800824178019472149, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9126271489562420489, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AbrirArtefatos
       objectReference: {fileID: 0}
     - target: {fileID: 5800824178019472153, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 835201250}
+    - target: {fileID: 9126271489562420489, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbrirArtefatos
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a1cb9e2034bc414d94c9932ee0ac5be, type: 3}
 --- !u!114 &296380371 stripped
@@ -839,7 +839,7 @@ MonoBehaviour:
   velx: 0.84
   position: 0
   limiteDireita: 2.542
-  limiteEsquerda: -1.07
+  limiteEsquerda: -1.443
   passouLimiteEs: 0
   passouLimiteDi: 0
 --- !u!50 &406165210
@@ -2234,11 +2234,6 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 2085457293}
-    - target: {fileID: 866778899653404389, guid: 526b970fc19faa94899749b1d42b1a02,
-        type: 3}
-      propertyPath: m_Name
-      value: PauseCnavas
-      objectReference: {fileID: 0}
     - target: {fileID: 866778899653404385, guid: 526b970fc19faa94899749b1d42b1a02,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2343,6 +2338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 866778899653404389, guid: 526b970fc19faa94899749b1d42b1a02,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseCnavas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526b970fc19faa94899749b1d42b1a02, type: 3}
@@ -2650,6 +2650,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 358024913601471274, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
       propertyPath: m_Name
@@ -2780,15 +2790,15 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 296380371}
+    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 1
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbrirLivro
       objectReference: {fileID: 0}
     - target: {fileID: 358024914984745322, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
@@ -2799,16 +2809,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 215.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 296380371}
-    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AbrirLivro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211fac17cde4fdc45b6df45cf5ab3fcd, type: 3}

@@ -16,21 +16,13 @@ public class neoli2Manager : MonoBehaviour
     public GameObject homem;
 
     public GameObject btnTrigo1;
-    public GameObject btnTrigo1Cuidar;
     public GameObject btnTrigo2;
-    public GameObject btnTrigo2Cuidar;
     public GameObject btnTrigo3;
-    public GameObject btnTrigo3Cuidar;
     public GameObject btnTrigo4;
-    public GameObject btnTrigo4Cuidar;
     public GameObject btnTrigo5;
-    public GameObject btnTrigo5Cuidar;
     public GameObject btnTrigo6;
-    public GameObject btnTrigo6Cuidar;
     public GameObject btnTrigo7;
-    public GameObject btnTrigo7Cuidar;
     public GameObject btnTrigo8;
-    public GameObject btnTrigo8Cuidar;
     public GameObject panelFinal;
     public GameObject texto;
 
@@ -58,21 +50,13 @@ public class neoli2Manager : MonoBehaviour
         painelSegund.SetActive(false);
         homem.SetActive(true);
         btnTrigo1.SetActive(false);
-        btnTrigo1Cuidar.SetActive(false);
         btnTrigo2.SetActive(false);
-        btnTrigo2Cuidar.SetActive(false);
         btnTrigo3.SetActive(false);
-        btnTrigo3Cuidar.SetActive(false);
         btnTrigo4.SetActive(false);
-        btnTrigo4Cuidar.SetActive(false);
         btnTrigo5.SetActive(false);
-        btnTrigo5Cuidar.SetActive(false);
         btnTrigo6.SetActive(false);
-        btnTrigo6Cuidar.SetActive(false);
         btnTrigo7.SetActive(false);
-        btnTrigo7Cuidar.SetActive(false);
         btnTrigo8.SetActive(false);
-        btnTrigo8Cuidar.SetActive(false);
         texto.SetActive(false);
         panelFinal.SetActive(false);
 
@@ -87,21 +71,8 @@ public class neoli2Manager : MonoBehaviour
         textoMudar();
         AparacerSeta();
         win();
-        tutorialTempo();
     }
-    void tutorialTempo()
-    {
-        if(sceneStep == 2)
-        {
-            tutTime += Time.deltaTime;
-            if (tutTime>= 8f)
-            {
-                tut.SetActive(false);
-            }
-        }
-        
-        
-    }
+   
     void ComecoCena()
     {
         if(sceneStep == 0)
@@ -128,14 +99,19 @@ public class neoli2Manager : MonoBehaviour
             if(crono >= 1f)
             {
                 tut.SetActive(true);
-                texto.SetActive(true);
-                bolsaTrigo.SetActive(true);
-                painelSegund.SetActive(false);
-                canvasMove.SetActive(true);
-                sceneStep = 2;
-                ativo = true;
+                
             }
         }
+    }
+    public void iniciar()
+    {
+        texto.SetActive(true);
+        bolsaTrigo.SetActive(true);
+        painelSegund.SetActive(false);
+        canvasMove.SetActive(true);
+        tut.SetActive(false);
+        sceneStep = 2;
+        ativo = true;
     }
     public void mudarFala()
     {

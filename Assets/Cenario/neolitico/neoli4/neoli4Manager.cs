@@ -8,6 +8,7 @@ public class neoli4Manager : MonoBehaviour
     public GameObject btnTutorial;
     public GameObject panelInicial;
     public GameObject btnCanvas;
+    public GameObject btnSkip;
 
     public bool ativo = false;
     public float crono = 0;
@@ -59,6 +60,7 @@ public class neoli4Manager : MonoBehaviour
         btnCanvas.SetActive(false);
         panelInicial.SetActive(true);
         btnTutorial.SetActive(false);
+        btnSkip.SetActive(false);
         Random random = new Random();
     }
 
@@ -80,16 +82,16 @@ public class neoli4Manager : MonoBehaviour
             {
                 panelInicial.SetActive(false);
                 btnTutorial.SetActive(true);
+                btnSkip.SetActive(true);
                 sceneStep = 1;
                 crono = 0;
 
             }
-        }
-        
+        }        
     }
     void JogoOn()
     {
-        if(sceneStep == 9)
+        if(sceneStep == 8)
         {
             ativo = true;
             btnCanvas.SetActive(true);
@@ -195,10 +197,11 @@ public class neoli4Manager : MonoBehaviour
     {
         sceneStep++;
         btnTutorial.GetComponent<Animator>().SetInteger("falaStep", sceneStep);
-        if(sceneStep == 8)
+        if(sceneStep == 7)
         {
             sceneStep++;
             btnTutorial.SetActive(false);
+            btnSkip.SetActive(false);
         }
         cronoFala += Time.deltaTime;
         if (cronoFala >= 1f)
@@ -269,7 +272,7 @@ public class neoli4Manager : MonoBehaviour
         if(won == true)
         {
             pontos.SetActive(false);
-            sceneStep = 7;
+            sceneStep = 6;
             ativo = false;
             cronoFim += Time.deltaTime;
             if(cronoFim >= 2f)
@@ -281,6 +284,11 @@ public class neoli4Manager : MonoBehaviour
             }
         }
     }
-
+    public void skipTutorial()
+    {
+        sceneStep=8;
+        btnTutorial.SetActive(false);
+        btnSkip.SetActive(false);
+    }
 
 }

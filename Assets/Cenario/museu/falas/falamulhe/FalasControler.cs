@@ -22,7 +22,7 @@ public class FalasControler : MonoBehaviour
             GetComponent<Animator>().SetInteger("derc", actualFala);
 
         }
-        if(actualFala >= 7)
+        if(actualFala >= 6)
         {            
             inicio = false;
             cronom += Time.deltaTime;

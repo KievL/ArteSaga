@@ -79,8 +79,9 @@ public class lanchonete : MonoBehaviour
                 GameObject.FindGameObjectWithTag("pablo").GetComponent<SpriteRenderer>().flipX = true;
                 GameObject.FindGameObjectWithTag("pablo").GetComponent<Animator>().SetBool("andando", true);
                 pabloTransform.Translate(new Vector2(-0.6f, 0) * Time.deltaTime);
-                if (pabloTransform.position.x <= 7.304965f)
+                if (pabloTransform.position.x <= 7.364004f)
                 {
+                    Salvador.comprou = true;
                     GameObject.FindGameObjectWithTag("pablo").GetComponent<SpriteRenderer>().flipX = false;
                     GameObject.FindGameObjectWithTag("pablo").GetComponent<Animator>().SetBool("andando", false);
                     GameObject.FindGameObjectWithTag("pablo").GetComponent<Animator>().SetBool("comer", true);

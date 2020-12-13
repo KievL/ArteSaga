@@ -7,13 +7,16 @@ public class guaxBehavior : MonoBehaviour
     public Vector2 posOut;
     public Vector2 posIn;
 
-    public bool allowed = false;
     public bool pronto = false;
     public static bool roubando = false;
     public bool primeiro = true;
     public float crono = 0;
     public float tempoDepois;
     public float crono2 = 0;
+
+    public GameObject guax;
+
+    public int vidaGuax = 4;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,7 @@ public class guaxBehavior : MonoBehaviour
     {
         prepararRoubo();
         roubandoTrigo();
+        guaxVida();
     }
     void prepararRoubo()
     {
@@ -34,19 +38,16 @@ public class guaxBehavior : MonoBehaviour
             crono += Time.deltaTime;
             if(crono >= tempoDepois)
             {
-                allowed = true;
-            }
-            if(allowed == true && pabloBehavior.lado == 0)
-            {
                 roubando = true;
-            }
+            }           
+                           
         }
     }
     void roubandoTrigo()
     {
         if(roubando == true)
         {
-            this.transform.position = posIn;
+            guax.SetActive(true);
             crono2 += Time.deltaTime;
             if(crono2 >= 1.5f)
             {
@@ -62,16 +63,15 @@ public class guaxBehavior : MonoBehaviour
                 }
                 roubando = false;
                 crono = 0;
-                allowed = false;
             }
 
         }
         if(roubando == false)
         {
-            this.transform.position = posOut;
+            guax.SetActive(false); ;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "primitivo")
         {
@@ -83,6 +83,25 @@ public class guaxBehavior : MonoBehaviour
                 primeiro = false;
                 tempoDepois = 15;
             }
+        }
+    }*/
+    public void baterGuax()
+    {
+        vidaGuax--;
+    }
+    void guaxVida()
+    {
+        if (vidaGuax <= 0)
+        {
+            roubando = false;
+            crono = 0;
+            if (primeiro == true)
+            {
+                primeiro = false;
+                tempoDepois = 15;
+            }
+            vidaGuax = 4;
+            guax.SetActive(false);
         }
     }
 }

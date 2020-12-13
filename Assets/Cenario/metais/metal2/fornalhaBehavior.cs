@@ -56,6 +56,8 @@ public class fornalhaBehavior : MonoBehaviour
     public float CronoFinal = 0;
     public static bool acabou = false;
 
+    public GameObject fornalha;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,7 @@ public class fornalhaBehavior : MonoBehaviour
         Esquentar();
         Derramando1();
         Acabar();
+        mudarSprite();
     }
 
     public void esquentarFerro()
@@ -290,6 +293,18 @@ public class fornalhaBehavior : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+    void mudarSprite()
+    {
+        if (esquentando == true)
+        {
+            fornalha.GetComponent<Animator>().SetBool("esquentando", true);
+
+        }
+        else
+        {
+            fornalha.GetComponent<Animator>().SetBool("esquentando", false);
         }
     }
 }

@@ -31,6 +31,14 @@ public class SalaPortaisManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("museuStep") == 3 && PlayerPrefs.GetInt("dentroPreHist")<2)
+        {
+            camera1.transform.position = new Vector3(-1.477743f, -0.466f, camera1.transform.position.z);
+            camera1.GetComponent<Camera>().orthographicSize = 0.4010499f;
+            pablo.transform.position = new Vector2(-1.858f, -0.498f);
+            pablo.GetComponent<SpriteRenderer>().flipX = false;
+            SceneStep = 1;
+        }
         PlayerPrefs.SetInt("museuStep", 3);
         PlayerPrefs.Save();
         painelFinal.SetActive(false); 

@@ -28,6 +28,8 @@ public class pablo : MonoBehaviour
     public bool setaParou = false;
     public GameObject setaCanvas;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -204,7 +206,7 @@ public class pablo : MonoBehaviour
         {
             pabloAndarOk();
             ChegouLimite();
-        }        
+        }
     }   
     void pabloAndarOk()
     {
@@ -282,4 +284,5 @@ public class pablo : MonoBehaviour
             setaCanvas.SetActive(false);
         }
     }
+    
 }

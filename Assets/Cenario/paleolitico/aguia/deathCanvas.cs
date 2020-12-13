@@ -25,7 +25,8 @@ public class deathCanvas : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         isDead = false;
-        primitivoBehaviour.pularLiberado = false;
+        PlayerPrefs.SetInt("tutorialPaleo1", 1);
+        primitivoBehaviour.pularLiberado = true;
         primitivoBehaviour.vidas = 3;
         PaleoManager.isCorrendo = false;
         PaleoManager.aguiaNascer = false;
@@ -33,6 +34,7 @@ public class deathCanvas : MonoBehaviour
         SpawnAguiaBaixo.transition = 0;
         PaleoManager.aguasPasssadas = 0;
         primitivoBehaviour.ganhou = false;
+        primitivoBehaviour.afetado = false;
         Time.timeScale = 1f;
 
     }

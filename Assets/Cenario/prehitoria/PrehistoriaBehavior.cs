@@ -19,6 +19,14 @@ public class PrehistoriaBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("saidaPrehist") == 1)
+        {
+            Time.timeScale = 1f;
+            pablo.transform.position = new Vector2(0.155f, pablo.transform.position.y);
+            PlayerPrefs.SetInt("saidaPrehist", 0);
+            neoTxt.SetActive(false);
+            metalTxt.SetActive(false);
+        }        
         painelInicial.SetActive(true);
         botaoEntrar.SetActive(false);
         painelFinal.SetActive(false);
@@ -101,6 +109,17 @@ public class PrehistoriaBehavior : MonoBehaviour
                 {
                     if (StepPaleo == 1 || StepPaleo == 0)
                     {
+                        deathCanvas.isDead = false;
+                        primitivoBehaviour.pularLiberado = false;
+                        primitivoBehaviour.vidas = 3;
+                        PaleoManager.isCorrendo = false;
+                        PaleoManager.aguiaNascer = false;
+                        SpawnAguiaCima.allowed = false;
+                        SpawnAguiaBaixo.transition = 0;
+                        PaleoManager.aguasPasssadas = 0;
+                        primitivoBehaviour.ganhou = false;
+                        primitivoBehaviour.afetado = false;
+                        PlayerPrefs.SetInt("tutorialPaleo1", 0);
                         SceneManager.LoadScene("Paleolitico");
                     }
                     if (StepPaleo == 2)
@@ -176,6 +195,7 @@ public class PrehistoriaBehavior : MonoBehaviour
     {
         if(pablo.transform.position.x <= -1.0718f)
         {
+
             PlayerPrefs.SetInt("dentroPreHist", 2);
             PlayerPrefs.Save();
             SceneManager.LoadScene("SalaPortais");

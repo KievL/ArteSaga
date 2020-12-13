@@ -22,13 +22,13 @@ public class Andar : MonoBehaviour
         direc = direcao;
         if (neoli2Manager.ocupado == false)
         {
-            if (direcao == 1)
+            if (direcao == 1 && pablo.transform.position.x<= 8.88f)
             {
 
                 pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(velMax, 0);
 
             }
-            else if (direcao == -1)
+            else if (direcao == -1 && pablo.transform.position.x >= -9.16f)
             {
 
                 pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(-velMax, 0);
