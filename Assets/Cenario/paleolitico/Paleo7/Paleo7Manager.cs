@@ -174,12 +174,11 @@ public class Paleo7Manager : MonoBehaviour
     {
         if(q1resp == false)
         {
-            q1a1.GetComponent<Image>().color = red;
-            q1a3.GetComponent<Image>().color = green;
+            q1a1.GetComponent<Image>().color = green;
             sceneStep = 7;
             crono = 0;
             q1resp = true;
-            godFellings--;
+            godFellings++;
         }        
     }
     public void quest1a2()
@@ -187,7 +186,7 @@ public class Paleo7Manager : MonoBehaviour
         if (q1resp == false)
         {
             q1a2.GetComponent<Image>().color = red;
-            q1a3.GetComponent<Image>().color = green;
+            q1a1.GetComponent<Image>().color = green;
             sceneStep = 7;
             crono = 0;
             q1resp = true;
@@ -198,11 +197,12 @@ public class Paleo7Manager : MonoBehaviour
     {
         if (q1resp == false)
         {            
-            q1a3.GetComponent<Image>().color = green;
+            q1a1.GetComponent<Image>().color = green;
+            q1a3.GetComponent<Image>().color = red;
             sceneStep = 7;
             crono = 0;
             q1resp = true;
-            godFellings++;
+            godFellings--;
         }
     }
     public void quest1a4()
@@ -210,7 +210,7 @@ public class Paleo7Manager : MonoBehaviour
         if (q1resp == false)
         {
             q1a4.GetComponent<Image>().color = red;
-            q1a3.GetComponent<Image>().color = green;
+            q1a1.GetComponent<Image>().color = green;
             sceneStep = 7;
             crono = 0;
             q1resp = true;
@@ -221,12 +221,11 @@ public class Paleo7Manager : MonoBehaviour
     {
         if (q2resp == false)
         {
-            q2a1.GetComponent<Image>().color = red;
-            q2a3.GetComponent<Image>().color = green;
+            q2a1.GetComponent<Image>().color = green;
             sceneStep = 10;
             crono = 0;
             q2resp = true;
-            godFellings--;
+            godFellings++;
         }
     }
     public void quest2a2()
@@ -234,7 +233,7 @@ public class Paleo7Manager : MonoBehaviour
         if (q2resp == false)
         {
             q2a2.GetComponent<Image>().color = red;
-            q2a3.GetComponent<Image>().color = green;
+            q2a1.GetComponent<Image>().color = green;
             sceneStep = 10;
             crono = 0;
             q2resp = true;
@@ -245,11 +244,12 @@ public class Paleo7Manager : MonoBehaviour
     {
         if (q2resp == false)
         {
-            q2a3.GetComponent<Image>().color = green;
+            q2a1.GetComponent<Image>().color = green;
+            q2a3.GetComponent<Image>().color = red;
             sceneStep = 10;
             crono = 0;
             q2resp = true;
-            godFellings++;
+            godFellings--;
         }
     }
     public void quest2a4()
@@ -257,7 +257,7 @@ public class Paleo7Manager : MonoBehaviour
         if (q2resp == false)
         {
             q2a4.GetComponent<Image>().color = red;
-            q2a3.GetComponent<Image>().color = green;
+            q2a1.GetComponent<Image>().color = green;
             sceneStep = 10;
             crono = 0;
             q2resp = true;

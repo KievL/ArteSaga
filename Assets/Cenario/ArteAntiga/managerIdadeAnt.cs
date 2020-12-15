@@ -86,14 +86,7 @@ public class managerIdadeAnt : MonoBehaviour
     }
     void aparecerBotao()
     {
-        if (posPablo != 0)
-        {
-            btnEntrar.SetActive(true);
-        }
-        else
-        {
-            btnEntrar.SetActive(false);
-        }
+        
     }
     public void EntrarPortal()
     {

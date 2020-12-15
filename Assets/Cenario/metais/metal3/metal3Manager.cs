@@ -11,16 +11,18 @@ public class metal3Manager : MonoBehaviour
     public int sceneStep = 0;
     public float crono = 0;
     public int falaStep = 0;
+    public GameObject finalCanvas;
     // Start is called before the first frame update
     void Start()
     {
+        painelFinal.SetActive(false);
         PlayerPrefs.SetInt("MetalLivroStep", 2);
         PlayerPrefs.Save();
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         PainelAparecer();
         falaAparacer();
         acabarCena();
@@ -55,6 +57,7 @@ public class metal3Manager : MonoBehaviour
         {
             fala.SetActive(false);
             painelFinal.SetActive(true);
+            finalCanvas.SetActive(true);
             crono += Time.deltaTime;
             if(crono >= 7f)
             {
@@ -66,7 +69,7 @@ public class metal3Manager : MonoBehaviour
     {
         falaStep++;
         fala.GetComponent<Animator>().SetInteger("falaStep", falaStep);
-        if(falaStep == 6)
+        if(falaStep == 1)
         {
             sceneStep = 2;
         }

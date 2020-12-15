@@ -48,4 +48,12 @@ public class MenuManager : MonoBehaviour
         
         
     }
+    public void Opcoes()
+    {
+        SceneManager.LoadScene("Opcoes");
+    }
+    public void Sair()
+    {
+        Application.Quit();
+    }
 }

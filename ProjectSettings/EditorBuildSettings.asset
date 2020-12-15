@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Cenario/paleolitico/Paleolitico.unity
     guid: 74c0f1953d634244a80afeee6dc2481d
   - enabled: 1
+    path: Assets/Cenario/Opcoes/Opcoes.unity
+    guid: a2d94af6ccd9b1849a88e9a842d3ed7d
+  - enabled: 1
     path: Assets/Cenario/paleolitico/Paleo4/Paleo4.unity
     guid: 3b8a5f00b36d8224885280158cf07789
   - enabled: 1

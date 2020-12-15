@@ -23883,14 +23883,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c106dfdc8ad87b84fafc436c882b583d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posOut: {x: 10.13, y: 6.94}
-  posIn: {x: 10.13, y: -0.63}
+  posOut: {x: 7.76, y: 8.36}
+  posIn: {x: 7.76, y: -0.61}
   pronto: 0
   primeiro: 1
   crono: 0
   tempoDepois: 0
   crono2: 0
   guax: {fileID: 1600949780}
+  guaxImage: {fileID: 999699611}
   vidaGuax: 4
 --- !u!95 &999699613
 Animator:
@@ -23969,7 +23970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999699611}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.21, y: 7.66, z: 0}
+  m_LocalPosition: {x: 7.93, y: 8.36, z: 0}
   m_LocalScale: {x: 2.7952795, y: 2.7952795, z: 2.7952795}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25491,7 +25492,7 @@ GameObject:
   - component: {fileID: 1600949782}
   - component: {fileID: 1600949786}
   m_Layer: 5
-  m_Name: Guaxinim
+  m_Name: Guaxinimbtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25513,8 +25514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272.6, y: -52.2}
-  m_SizeDelta: {x: 49.93, y: 41.83}
+  m_AnchoredPosition: {x: 285.65, y: -43.59}
+  m_SizeDelta: {x: 97.67, y: 70.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1600949782
 Animator:
@@ -25555,11 +25556,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

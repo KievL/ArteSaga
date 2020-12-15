@@ -66,7 +66,7 @@ public class metal1Manager : MonoBehaviour
     {
         falaStep++;
         btnFala.GetComponent<Animator>().SetInteger("falaStep", falaStep);
-        if(falaStep == 5)
+        if(falaStep == 1)
         {
             sceneStep = 2;
         }

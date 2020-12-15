@@ -24,6 +24,8 @@ public class metal2Manager : MonoBehaviour
 
     public GameObject btnBotarForma;
 
+    public GameObject tutEspere, tutEsquentar, tutMisturar, tutTirarMistura, tutTirarMinerio, tutMoldes;
+
     public float crono = 0;
     public int sceneStep = 0;
     public int tutStep = 0;
@@ -54,6 +56,7 @@ public class metal2Manager : MonoBehaviour
         ComecarJogo();
         aparecerBotoes();
         tirarMinerio();
+        aparecerMissoes();
     }
 
     void InicioTutorial()
@@ -84,7 +87,7 @@ public class metal2Manager : MonoBehaviour
     {
         tutStep++;
         tutorialBtn.GetComponent<Animator>().SetInteger("tutorialStep", tutStep);
-        if (tutStep == 5)
+        if (tutStep == 3)
         {
             sceneStep = 1;
         }
@@ -240,5 +243,68 @@ public class metal2Manager : MonoBehaviour
     public void AbrirMisturaCanvas()
     {
 
+    }
+    void aparecerMissoes()
+    {
+        if (esquentando == true && fornalhaBehavior.minerioPronto == false)
+        {
+            tutEspere.SetActive(true);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(false);
+        }else if (fornalhaBehavior.minerioPronto == true)
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(true);
+            tutTirarMistura.SetActive(false);
+        }else if(mistura1Ready == true && mistura2Ready == true && fornalhaBehavior.acabou == false)
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(true);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(false);
+        }
+        else if (jogoValendo == true && esquentando == false && qntsLiqs < 2)
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(true);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(false);
+        }
+        else if (qntsLiqs == 2)
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(true);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(false);
+        }else if (fornalhaBehavior.misturaPronta == true)
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(true);
+        }
+        else
+        {
+            tutEspere.SetActive(false);
+            tutEsquentar.SetActive(false);
+            tutMisturar.SetActive(false);
+            tutMoldes.SetActive(false);
+            tutTirarMinerio.SetActive(false);
+            tutTirarMistura.SetActive(false);
+        }
     }
 }

@@ -15,6 +15,7 @@ public class guaxBehavior : MonoBehaviour
     public float crono2 = 0;
 
     public GameObject guax;
+    public GameObject guaxImage;
 
     public int vidaGuax = 4;
 
@@ -48,6 +49,7 @@ public class guaxBehavior : MonoBehaviour
         if(roubando == true)
         {
             guax.SetActive(true);
+            guaxImage.transform.position = posIn;
             crono2 += Time.deltaTime;
             if(crono2 >= 1.5f)
             {
@@ -68,7 +70,8 @@ public class guaxBehavior : MonoBehaviour
         }
         if(roubando == false)
         {
-            guax.SetActive(false); ;
+            guax.SetActive(false);
+            guaxImage.transform.position = posOut;
         }
     }
     /*private void OnTriggerEnter2D(Collider2D collision)
