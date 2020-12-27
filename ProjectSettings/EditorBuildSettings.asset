@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Cenario/paleolitico/Paleo4/Paleo4.unity
     guid: 3b8a5f00b36d8224885280158cf07789
   - enabled: 1
+    path: Assets/Cenario/Egito/Egito2/Egito2.unity
+    guid: 1b48d9f884ffd7a4198d27c1733eabc5
+  - enabled: 1
     path: Assets/Cenario/Egito/Egito1/Egito1.unity
     guid: 41034b89a27cfe84f904595a7779a60d
   - enabled: 1

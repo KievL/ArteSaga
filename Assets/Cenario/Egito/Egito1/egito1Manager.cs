@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class egito1Manager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class egito1Manager : MonoBehaviour
     public GameObject chao2;
     public GameObject chao3;
     public GameObject chao4;
+    public GameObject chao5;
+    public GameObject chao6;
+    public GameObject chao7;
     public GameObject pablo;
     public GameObject fundo;
     public GameObject fala1;
@@ -21,8 +25,11 @@ public class egito1Manager : MonoBehaviour
     public GameObject btnWrong;
     public GameObject hitMark;
 
-    public float velo;
+    public float velAreia, velf1, velf2, velf3, velf4, velf5;
+    public GameObject f1, f2, f3, f4, f5, f12, f22,f32,f42,f52;
     public float velMultiplicador;
+    public float velEclipse;
+    public GameObject eclipse;
 
     public float velPabloInicial;
     public float velMultiplicadorPablo;
@@ -65,17 +72,17 @@ public class egito1Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Aparecer Botao
-        aparecerBotao();
-        //Aparecer Botao
+        
 
         //Cena Inicial
         piramideWalk();
         areiaWalk();
         pabloAndando();
-        moverFundo();
+        paralaxSpeed();
+        transition();
+        //moverFundo();
         //Cena Inicial
-
+        /*
         //Tutorial
         tutorialFala();
         //Tutorial
@@ -84,12 +91,17 @@ public class egito1Manager : MonoBehaviour
         andarPiramide();
         //Scene 1
 
+        //Aparecer Botao
+        aparecerBotao();
+        //Aparecer Botao
+
         //Errar
         errouMethod();
         aparecerBotoes();
         //Errar
+        */
     }
-
+    
     //Cena inicial
     void piramideWalk()
     {
@@ -105,33 +117,25 @@ public class egito1Manager : MonoBehaviour
     }
     void areiaWalk()
     {
-        if(velo<0f)
+        if(velAreia<0f)
         {
-            velo = velo - Time.deltaTime*velMultiplicador;
-            chao1.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-            chao2.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-            chao3.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-            chao4.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-            piramideOfc.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-            defensor.GetComponent<Rigidbody2D>().velocity = new Vector2(velo, 0);
-        }
-        else
-        {
-            piramideOfc.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            chao1.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            chao2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            chao3.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            chao4.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            defensor.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
+            chao1.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao2.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao3.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao4.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao5.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao6.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+            chao7.GetComponent<Rigidbody2D>().velocity = new Vector2(velAreia, 0);
+
+        }       
     }
     void pabloAndando()
     {
         if (velPabloInicial > 0f)
         {
-            velPabloInicial = velPabloInicial - Time.deltaTime * velMultiplicadorPablo;
             pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(velPabloInicial, 0);
             pablo.GetComponent<Animator>().SetBool("correndo", true);
+            cam.GetComponent<Rigidbody2D>().velocity = new Vector2(velPabloInicial, 0);
         }
         else
         {
@@ -144,6 +148,31 @@ public class egito1Manager : MonoBehaviour
            
         }
     }
+    void paralaxSpeed()
+    {
+        f1.GetComponent<Rigidbody2D>().velocity = new Vector2(velf1, 0);
+        f12.GetComponent<Rigidbody2D>().velocity = new Vector2(velf1, 0);
+        f2.GetComponent<Rigidbody2D>().velocity = new Vector2(velf2, 0);
+        f22.GetComponent<Rigidbody2D>().velocity = new Vector2(velf2, 0);
+        f3.GetComponent<Rigidbody2D>().velocity = new Vector2(velf3, 0);
+        f32.GetComponent<Rigidbody2D>().velocity = new Vector2(velf3, 0);
+        f4.GetComponent<Rigidbody2D>().velocity = new Vector2(velf4, 0);
+        f42.GetComponent<Rigidbody2D>().velocity = new Vector2(velf4, 0);
+        f5.GetComponent<Rigidbody2D>().velocity = new Vector2(velf5, 0);
+        f52.GetComponent<Rigidbody2D>().velocity = new Vector2(velf5, 0);
+    }
+    void transition()
+    {
+        if(cam.transform.position.x >= 6.959995f)
+        {
+            eclipse.GetComponent<Rigidbody2D>().velocity = new Vector2(velEclipse, 0);
+            if(cam.transform.position.x >= 11.63999f)
+            {
+                SceneManager.LoadScene("Egito2");
+            }
+        }
+    }
+    /*
     void moverFundo()
     {
         if(velFundo < 0f)
@@ -156,8 +185,8 @@ public class egito1Manager : MonoBehaviour
             fundo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
-    //Cenal inicial
 
+    //Cenal inicial   
     //AparecerBotao
     void aparecerBotao()
     {
@@ -289,6 +318,6 @@ public class egito1Manager : MonoBehaviour
         }
     }
     //Errar
-
+    */
 
 }

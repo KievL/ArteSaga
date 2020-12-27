@@ -1919,7 +1919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "GR\xC9CIA\n(BLOQUEADO)"
+  m_Text: "GR\xC9CIA"
 --- !u!222 &1045173749
 CanvasRenderer:
   m_ObjectHideFlags: 0

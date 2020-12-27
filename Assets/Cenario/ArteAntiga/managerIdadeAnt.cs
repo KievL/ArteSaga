@@ -86,7 +86,10 @@ public class managerIdadeAnt : MonoBehaviour
     }
     void aparecerBotao()
     {
-        
+        if (posPablo == 1 && pabloGeral.liberado == true)
+        {
+            btnEntrar.SetActive(true);
+        }
     }
     public void EntrarPortal()
     {
@@ -108,7 +111,7 @@ public class managerIdadeAnt : MonoBehaviour
             {
                 pablo.GetComponent<SpriteRenderer>().flipX = false;
                 cam.transform.position = new Vector3(pablo.transform.position.x + offsetX, offsetY, cam.transform.position.z);
-                if (cam.GetComponent<Camera>().orthographicSize>= 0.09706646)
+                if (cam.GetComponent<Camera>().orthographicSize>= 0.0883)
                 {
                     cam.GetComponent<Camera>().orthographicSize = cam.GetComponent<Camera>().orthographicSize - Time.deltaTime;
                 }
