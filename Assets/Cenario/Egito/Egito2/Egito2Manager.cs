@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Egito2Manager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Egito2Manager : MonoBehaviour
     public GameObject tutorial;
     public GameObject esqueleto;
     public GameObject hitMark;
+    public GameObject portao;
 
     public float velEclispse, velPabloIni, velCameraIni;
     public float camOrthoMulti;
@@ -30,7 +32,7 @@ public class Egito2Manager : MonoBehaviour
 
     public static bool clickEnigma = false;
 
-    public bool noPapiro = false;
+    public static bool noPapiro = false;
 
     public static int acertou = 0;
 
@@ -52,6 +54,10 @@ public class Egito2Manager : MonoBehaviour
     public float cronoDoendo = 0;
     public int doendoStep = 0;
 
+    public float cronoAcertou = 0;
+    public int acertouStep = 0;
+
+    public float velCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -218,7 +224,40 @@ public class Egito2Manager : MonoBehaviour
     {
         if (acertou == 1)
         {
+            cronoAcertou += Time.deltaTime;
+            if(cronoAcertou>=2.3f && acertouStep == 0)
+            {
+                portao.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 2f);
+                if(portao.transform.position.y >= 2.99f)
+                {
+                    portao.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                    acertouStep = 1;
+                    cronoAcertou = 0;
+                }
 
+            }
+            if (acertouStep == 1)
+            {
+                pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(2.5f, 0);
+                pablo.GetComponent<Animator>().SetBool("correndo", true);
+                if (pablo.transform.position.x >= -0.25f)
+                {
+                    pablo.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                }
+                if(pablo.transform.position.x >= 4.28f)
+                {
+                    cam.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -velCamera);
+                    if(cam.transform.position.y <= -22.11f)
+                    {
+                        acertouStep = 2;
+                    }
+                }
+            }
+            if (acertouStep == 2)
+            {
+                SceneManager.LoadScene("Egito3");
+                cam.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            }
         }
         else if(acertou == -1)
         {
@@ -264,7 +303,7 @@ public class Egito2Manager : MonoBehaviour
                 {
                     esqueleto.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                     hitMarkApareceu = false;
-                    esqueleto.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    esqueleto.GetComponent<SpriteRenderer>().sortingOrder = 2;
                     perdeuStep = 0;
                     cronoPerdeu = 0;
                     acertou = 0;

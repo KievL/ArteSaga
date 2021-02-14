@@ -68,7 +68,7 @@ public class enigmaManager : MonoBehaviour
     void clickarHiero()
     {
         
-        if (Egito2Manager.clickEnigma == true && podeClikar==true){
+        if (Egito2Manager.clickEnigma == true && podeClikar==true && Egito2Manager.noPapiro==false){
             if (Input.GetMouseButtonDown(0))
             {
                 hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);

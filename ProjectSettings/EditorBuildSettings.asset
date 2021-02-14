@@ -24,8 +24,20 @@ EditorBuildSettings:
     path: Assets/Cenario/paleolitico/Paleolitico.unity
     guid: 74c0f1953d634244a80afeee6dc2481d
   - enabled: 1
+    path: Assets/Cenario/Egito/Egito3/Egito3.unity
+    guid: 84c57bc6ea39a4b47a9a5f73ec3852f2
+  - enabled: 1
+    path: Assets/Cenario/Egito/Egito5/Egito5.unity
+    guid: e1adba97f0ec5f14489be525d082cd07
+  - enabled: 1
+    path: Assets/Cenario/Egito/Egito6/Egito6.unity
+    guid: 8cb7595258e294d4cba9971da97115a2
+  - enabled: 1
     path: Assets/Cenario/Opcoes/Opcoes.unity
     guid: a2d94af6ccd9b1849a88e9a842d3ed7d
+  - enabled: 1
+    path: Assets/Cenario/Egito/Egito4/Egito4.unity
+    guid: c148e698e82a67844bfe5746ad08a7d6
   - enabled: 1
     path: Assets/Cenario/paleolitico/Paleo4/Paleo4.unity
     guid: 3b8a5f00b36d8224885280158cf07789
