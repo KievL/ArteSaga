@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Egito4Manager : MonoBehaviour
 {
@@ -116,6 +117,10 @@ public class Egito4Manager : MonoBehaviour
             pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(velPablo, 0);
             ball2.transform.Rotate(new Vector3(0, 0, rotSpeed));
             ball2.GetComponent<Rigidbody2D>().velocity = new Vector2(velPablo*1.4f, 0);
+            if(ball2.transform.position.x >= -21.84f)
+            {
+                SceneManager.LoadScene("Egito5");
+            }
         }
     }
 

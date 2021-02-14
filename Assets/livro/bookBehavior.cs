@@ -37,6 +37,7 @@ public class bookBehavior : MonoBehaviour
     public int PaleoLivro;
     public int NeoLivro;
     public int MetalLivro;
+    public int EgitoLivro;
 
     //Neolítico
     public GameObject Bloq1Neo;
@@ -72,7 +73,20 @@ public class bookBehavior : MonoBehaviour
     public GameObject closeEsculturas;
     public GameObject closeOuviseria;
 
+    //Egito
+    public GameObject bloqEgito;
 
+    public GameObject btnAbrirEsculturaEgito;
+    public GameObject btnAbrirPinturaEgito;
+    public GameObject btnAbrirArquiteturaEgito;
+
+    public GameObject esculturaEgito;
+    public GameObject pinturaEgito;
+    public GameObject arquiteturaEgito;
+
+    public GameObject closeEsculturaEgito;
+    public GameObject closePinturaEgito;
+    public GameObject closeArquiteturaEgito;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +104,7 @@ public class bookBehavior : MonoBehaviour
         PaleoLivro = PlayerPrefs.GetInt("PaleoLivroStep");
         NeoLivro = PlayerPrefs.GetInt("NeoLivroStep");
         MetalLivro = PlayerPrefs.GetInt("MetalLivroStep");
+        EgitoLivro = PlayerPrefs.GetInt("EgitoLivroStep");
         if (PaleoLivro >= 2 && page == 0)
         {
             BloqPaleo1.SetActive(false);
@@ -118,9 +133,16 @@ public class bookBehavior : MonoBehaviour
             bloqMetal.SetActive(false);
             btnAbrirContextoMetal.SetActive(true);
             btnAbrirOuviseria.SetActive(true);
-            btnAbrirEsculturasMetal.SetActive(true);
-            
+            btnAbrirEsculturasMetal.SetActive(true);            
         }
+        if (EgitoLivro >= 2 && page == 1)
+        {
+            bloqEgito.SetActive(false);
+            btnAbrirEsculturaEgito.SetActive(true);
+            btnAbrirPinturaEgito.SetActive(true);
+            btnAbrirArquiteturaEgito.SetActive(true);
+        }
+
     }
     public void AbrirLivro()
     {
@@ -169,6 +191,10 @@ public class bookBehavior : MonoBehaviour
         btnAbrirContextoMetal.SetActive(false);
         btnAbrirEsculturasMetal.SetActive(false);
         btnAbrirOuviseria.SetActive(false);
+
+        btnAbrirEsculturaEgito.SetActive(false);
+        btnAbrirPinturaEgito.SetActive(false);
+        btnAbrirArquiteturaEgito.SetActive(false);
 
         closeLivro.SetActive(false);
     }
@@ -252,6 +278,48 @@ public class bookBehavior : MonoBehaviour
         abrirAlgo();
         closeOuviseria.SetActive(true);
         ouviseria.SetActive(true);
+
+    }
+    public void AbrirArquitetura()
+    {
+        abrirAlgo();
+        closeArquiteturaEgito.SetActive(true);
+        arquiteturaEgito.SetActive(true);
+
+    }
+    public void AbrirEscultura()
+    {
+        abrirAlgo();
+        closeEsculturaEgito.SetActive(true);
+        esculturaEgito.SetActive(true);
+
+    }
+    public void AbrirPinturaEgito()
+    {
+        abrirAlgo();
+        closePinturaEgito.SetActive(true);
+        pinturaEgito.SetActive(true);
+
+    }
+    public void FecharPinturaEgito()
+    {
+        passaPagina();
+        closePinturaEgito.SetActive(false);
+        pinturaEgito.SetActive(false);
+
+    }
+    public void FecharEscultura()
+    {
+        passaPagina();
+        closeEsculturaEgito.SetActive(false);
+        esculturaEgito.SetActive(false);
+
+    }
+    public void FecharArquitetura()
+    {
+        passaPagina();
+        closeArquiteturaEgito.SetActive(false);
+        arquiteturaEgito.SetActive(false);
 
     }
     public void FecharContextoMetal()

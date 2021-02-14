@@ -164,7 +164,15 @@ public class managerIdadeAnt : MonoBehaviour
                 else
                 {
                     pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-                    SceneManager.LoadScene("Egito1");
+                    if (PlayerPrefs.GetInt("EgitoStep") == 0)
+                    {
+                        SceneManager.LoadScene("Egito1");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Egito3");
+                    }
+                    
                 }
 
             }
@@ -181,7 +189,14 @@ public class managerIdadeAnt : MonoBehaviour
                 else
                 {
                     pablo.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-                    SceneManager.LoadScene("Egito1");
+                    if (PlayerPrefs.GetInt("EgitoStep") == 0)
+                    {
+                        SceneManager.LoadScene("Egito1");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("Egito3");
+                    }
                 }
             }
         }
