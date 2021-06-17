@@ -54,7 +54,6 @@ public class Egito5Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         oof = Resources.Load<AudioClip>("uuh");
         vaso = Resources.Load<AudioClip>("vasoBreak");
         coinAudio = Resources.Load<AudioClip>("coinSound");
@@ -467,6 +466,19 @@ public class Egito5Manager : MonoBehaviour
         btnTut.SetActive(false);
         btnJumpTut.SetActive(false);
         btnJump.SetActive(true);
+        Time.timeScale = 1f;
+    }
+    public void pularTudo()
+    {
+        anubisB = true;
+        osirisB = true;
+        horusB = true;
+        isisB = true;
+        sobekB = true;
+        ranumB = true;
+        neftisB = true;
+        thotB = true;
+        SceneManager.LoadScene("Egito6");
         Time.timeScale = 1f;
     }
 }

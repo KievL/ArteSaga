@@ -205,9 +205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'EGITO ANTIGO
-
-    (BLOQUEADO)'
+  m_Text: EGITO ANTIGO
 --- !u!222 &161064710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -216,6 +214,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161064706}
   m_CullTransparentMesh: 0
+--- !u!1001 &182221644
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5800824177862929040, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_Name
+      value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929040, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929041, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: btnAbrirLivro
+      value: 
+      objectReference: {fileID: 1142285664}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.9059687
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18251438
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -387.5293
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824177862929042, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824178019472149, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5800824178019472153, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 388387573}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a1cb9e2034bc414d94c9932ee0ac5be, type: 3}
 --- !u!1 &319355987
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.9299927, y: -0.060028076}
+  m_AnchoredPosition: {x: -0.92993164, y: -0.05999756}
   m_SizeDelta: {x: 13.440031, y: 7.319973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384161626
@@ -867,6 +954,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &439191012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5800824177862929041, guid: 0a1cb9e2034bc414d94c9932ee0ac5be,
+    type: 3}
+  m_PrefabInstance: {fileID: 182221644}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63cf6f1a48f4f843a064ed6e109e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &486923230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,10 +1244,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 358024913601471273, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 358024913601471274, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
       propertyPath: m_Name
       value: CanvasBtnLivro
+      objectReference: {fileID: 0}
+    - target: {fileID: 358024913601471274, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 358024913601471275, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
@@ -1188,7 +1302,7 @@ PrefabInstance:
     - target: {fileID: 358024913601471275, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 358024913601471275, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
@@ -1268,7 +1382,22 @@ PrefabInstance:
     - target: {fileID: 358024913601471278, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 33
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 358024913601471278, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 439191012}
+    - target: {fileID: 358024914984745302, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbrirLivro
       objectReference: {fileID: 0}
     - target: {fileID: 358024914984745322, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
         type: 3}
@@ -1330,11 +1459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1928,6 +2057,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045173745}
   m_CullTransparentMesh: 0
+--- !u!1 &1142285664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 358024914984745297, guid: 211fac17cde4fdc45b6df45cf5ab3fcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 838570508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1169426003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2395,7 @@ PrefabInstance:
     - target: {fileID: 866778899653404385, guid: 526b970fc19faa94899749b1d42b1a02,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 866778899653404385, guid: 526b970fc19faa94899749b1d42b1a02,
         type: 3}
