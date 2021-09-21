@@ -10,10 +10,19 @@ public class MenuManager : MonoBehaviour
     public float crono = 0;
     public bool botarPainel = false;
     public bool apertouBotao = false;
+
+    float cronoMusic = 0f;
+
+    public static AudioClip intro;
+    static AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Start()
     {
         painel.SetActive(false);
+        intro = Resources.Load<AudioClip>("intro");
+        audioSrc = GetComponent<AudioSource>();
+        audioSrc.PlayOneShot(intro);
     }
 
     // Update is called once per frame
@@ -36,6 +45,16 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+    void playMusic()
+    {
+        crono += Time.deltaTime;
+        if (crono >= 130)
+        {
+            audioSrc.PlayOneShot(intro);
+            crono = 0;
+        }
+    }
+
     public void Jogar()
     { 
         if(apertouBotao == false)

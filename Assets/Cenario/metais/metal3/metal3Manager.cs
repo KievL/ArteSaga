@@ -61,6 +61,8 @@ public class metal3Manager : MonoBehaviour
             crono += Time.deltaTime;
             if(crono >= 7f)
             {
+                PlayerPrefs.SetInt("SairPortalPreHist", 1);
+                PlayerPrefs.Save();
                 SceneManager.LoadScene("prehistoria");
             }
         }

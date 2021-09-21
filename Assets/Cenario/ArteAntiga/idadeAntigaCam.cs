@@ -18,7 +18,7 @@ public class idadeAntigaCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pabloGeral.liberado == true && pablo.transform.position.x >= -0.099 && pablo.transform.position.x <= 1.256f)
+        if (pabloGeral.liberado == true && pablo.transform.position.x >= -0.099 && pablo.transform.position.x <= 2.947998f)
         {
             cam.transform.position = new Vector3(pablo.transform.position.x + offsetX, offsetY, cam.transform.position.z);
         }

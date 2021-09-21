@@ -207,11 +207,12 @@ public class CameraFollowing : MonoBehaviour
                 GameObject.FindGameObjectWithTag("velho").GetComponent<Transform>().position = new Vector2(8.0518f, -0.673f);
                 GameObject.FindGameObjectWithTag("falaVei").GetComponent<Animator>().SetInteger("falaStep", 1);
                 GameObject.FindGameObjectWithTag("falaVei").GetComponent<Transform>().position = new Vector2(7.97f, -0.754f);
+                soundMuseum.tocarLiberado = false;
                 cameraType = 30;
             }
         } 
         if(cameraType == 7)
-        {
+        {            
             this.transform.position = new Vector3(-0.136708f, -0.8539994f, -10.63f);
             Camera cam = GetComponent<Camera>();
             cam.orthographicSize = 0.4337385f;

@@ -524,7 +524,7 @@ public class Egito6Manager : MonoBehaviour
                 }
                 btnGo.SetActive(true);
                 PlayerPrefs.SetInt("EgitoLivroStep", 3);
-                PlayerPrefs.SetInt("EgitoStep", 0);
+                PlayerPrefs.SetInt("EgitoStep", 2);
             }
         }
     }

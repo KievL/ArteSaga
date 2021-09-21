@@ -322,6 +322,7 @@ public class Paleo7Manager : MonoBehaviour
                 if(finalCrono2 >= 7f)
                 {
                     PlayerPrefs.SetInt("PaleoStep", 0);
+                    PlayerPrefs.SetInt("SairPortalPreHist", 1);
                     PlayerPrefs.SetInt("PaleoBook", 2);
                     PlayerPrefs.Save();
                     SceneManager.LoadScene("prehistoria");

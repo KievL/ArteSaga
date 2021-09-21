@@ -16,9 +16,21 @@ public class PrehistoriaBehavior : MonoBehaviour
     public GameObject paleoTxt;
     public GameObject neoTxt;
     public GameObject metalTxt;
+
+    public GameObject seta;
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("SairPortalPreHist") == 1)
+        {
+            seta.SetActive(true);
+            PlayerPrefs.SetInt("SairPortalPreHist", 0);
+        }
+        else
+        {
+            seta.SetActive(false);
+        }
+
         if (PlayerPrefs.GetInt("saidaPrehist") == 1)
         {
             Time.timeScale = 1f;

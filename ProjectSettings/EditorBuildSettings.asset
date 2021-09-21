@@ -24,6 +24,15 @@ EditorBuildSettings:
     path: Assets/Cenario/paleolitico/Paleolitico.unity
     guid: 74c0f1953d634244a80afeee6dc2481d
   - enabled: 1
+    path: Assets/Cenario/Gotica/gotica4/gotica4.unity
+    guid: 48beb9957fdac6c40a7eb5dfcc1d1f08
+  - enabled: 1
+    path: Assets/Cenario/Gotica/gotica3/gotica3.unity
+    guid: 2ca816e2c5618ab4681f01e4d6bbc3fd
+  - enabled: 1
+    path: Assets/Cenario/Gotica/gotica2/gotica2.unity
+    guid: 291c03ef45dfc854eb0aff2302564ca7
+  - enabled: 1
     path: Assets/Cenario/Egito/Egito3/Egito3.unity
     guid: 84c57bc6ea39a4b47a9a5f73ec3852f2
   - enabled: 1
@@ -32,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenario/Egito/Egito6/Egito6.unity
     guid: 8cb7595258e294d4cba9971da97115a2
+  - enabled: 1
+    path: Assets/Cenario/Gotica/gotica1/gotica1.unity
+    guid: 6f32b591c0494a24789337d617d82409
   - enabled: 1
     path: Assets/Cenario/Opcoes/Opcoes.unity
     guid: a2d94af6ccd9b1849a88e9a842d3ed7d
@@ -92,4 +104,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenario/paleolitico/venus/fazerVenus.unity
     guid: fa806d2fc8c007741bce60fbd45de472
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga.unity
+    guid: db21147785e14634b8b4db92171a2be3
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga2.unity
+    guid: d4efda146fc187744a7f846fdb858cb2
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga3.unity
+    guid: 7f98c305894a44446bf3294ec12819a8
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga4.unity
+    guid: 5a8e18b2e0b25384ebabfad1de1aba7c
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga5.unity
+    guid: dc12c6044394c9142aa0eaef3bbe37af
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga6.unity
+    guid: 3f94e3299ffaa9b4182346c81dbc92cc
+  - enabled: 1
+    path: Assets/Cenario/GreciaAntiga/GreciaAntiga7.unity
+    guid: acde9ef40ddf8724aa17c1d4d0301285
   m_configObjects: {}

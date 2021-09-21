@@ -72,6 +72,7 @@ public class Neoli5Manager : MonoBehaviour
             if(crono>= 6.7f)
             {
                 PlayerPrefs.SetInt("NeoliStep", 0);
+                PlayerPrefs.SetInt("SairPortalPreHist", 1);
                 PlayerPrefs.Save();
                 SceneManager.LoadScene("prehistoria");
             }

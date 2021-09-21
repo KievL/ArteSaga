@@ -2,21 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class managerIdadeAnt : MonoBehaviour
 {
     public GameObject pablo;
     public GameObject txtEgito;
     public GameObject txtGrecia;
+    public GameObject txtRoma;
     public GameObject btnEntrar;
     public GameObject cam;
     public GameObject piramide;
     public GameObject painel;
-
+    public GameObject painelGreciaEntrar;
+    public GameObject backLight;
+    public GameObject backDark;
+    public GameObject btnBook;
+    public GameObject bookSeta;
 
     public int posPablo;
 
     public bool entraEgito = false;
+    bool entraGrecia = false;
+
+    public float crono = 0;
 
     public float offsetX, offsetY;
 
@@ -26,10 +35,23 @@ public class managerIdadeAnt : MonoBehaviour
 
     public bool aparecerPainel = false;
 
+    int whichStart = 0;
+    int sceneStep = 0;
+
+    bool liberouinicial = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        pabloGeral.liberado = true;
+        pabloGeral.liberado = false;
+        if (PlayerPrefs.GetInt("EgitoStep") == 2)
+        {
+            whichStart = 1;
+        }
+        else if(PlayerPrefs.GetInt("grecia") == 1)
+        {
+            whichStart = 2;
+        }
     }
 
     // Update is called once per frame
@@ -40,6 +62,8 @@ public class managerIdadeAnt : MonoBehaviour
         posicaoPablo();
         aparecerBotao();
         entrarEgito();
+        entrarGrecia();
+        startScene();
     }
     void voltarPortal()
     {
@@ -68,6 +92,14 @@ public class managerIdadeAnt : MonoBehaviour
         {
             txtGrecia.SetActive(false);
         }
+        if(posPablo == 3 && pabloGeral.liberado == true)
+        {
+            txtRoma.SetActive(true);
+        }
+        else
+        {
+            txtRoma.SetActive(false);
+        }
     }
     void posicaoPablo()
     {
@@ -78,6 +110,10 @@ public class managerIdadeAnt : MonoBehaviour
         else if(pablo.transform.position.x >= 1.09f && pablo.transform.position.x <= 2.36f)
         {
             posPablo = 2;
+        }
+        else if (pablo.transform.position.x >= 2.728f && pablo.transform.position.x <= 4.226f)
+        {
+            posPablo = 3;
         }
         else
         {
@@ -90,6 +126,15 @@ public class managerIdadeAnt : MonoBehaviour
         {
             btnEntrar.SetActive(true);
         }
+        else if (posPablo == 2 && pabloGeral.liberado == true)
+        {
+            btnEntrar.SetActive(true);
+        }
+        else
+        {
+            btnEntrar.SetActive(false);
+        }
+
     }
     public void EntrarPortal()
     {
@@ -98,9 +143,24 @@ public class managerIdadeAnt : MonoBehaviour
             entraEgito = true;
             pabloGeral.liberado = false;
         }
+        if (posPablo == 2 && pabloGeral.liberado == true)
         {
-
+            entraGrecia = true;
+            pabloGeral.liberado = false;
         }
+    }
+    void entrarGrecia()
+    {
+        if (entraGrecia)
+        {
+            painelGreciaEntrar.SetActive(true);
+            crono += Time.deltaTime;
+            if (crono >= 1.5f)
+            {
+                PlayerPrefs.SetInt("grecia", 1);
+                SceneManager.LoadScene("GreciaAntiga");
+            }
+        }    
     }
     void entrarEgito()
     {
@@ -203,6 +263,76 @@ public class managerIdadeAnt : MonoBehaviour
         if(aparecerPainel == true)
         {
             painel.SetActive(true);
+        }
+    }
+    void startScene()
+    {
+        if (whichStart == 1)
+        {
+            if (sceneStep == 0)
+            {
+                pablo.transform.position = new Vector3(-0.037f, -1.0397f, pablo.transform.position.z);
+                backLight.SetActive(true);
+                crono += Time.deltaTime;
+                if (crono >= 1f)
+                {
+                    sceneStep++;
+                    crono = 0f;
+                
+                }
+
+            }
+            else if (sceneStep == 1)
+            {
+                PlayerPrefs.SetInt("EgitoStep", 0);
+                PlayerPrefs.Save();
+                backLight.SetActive(false);
+                bookSeta.SetActive(true);
+                pabloGeral.liberado = true;
+                sceneStep = 2;
+
+            }
+            
+        }
+        else if (whichStart == 2)
+        {
+            if (sceneStep == 0)
+            {
+                if (liberouinicial)
+                {
+                    pabloGeral.liberado = true;
+
+                }
+                else
+                {
+                    pabloGeral.liberado = false;
+                }
+                liberouinicial = false;
+                pablo.transform.position = new Vector3(1.254f, -1.0397f, pablo.transform.position.z);
+                backDark.SetActive(true);
+                crono += Time.deltaTime;
+                if (crono >= 1f)
+                {
+                    sceneStep++;
+                    crono = 0f;
+
+                }
+
+            }
+            else if (sceneStep == 1)
+            {
+                backDark.SetActive(false);
+                PlayerPrefs.SetInt("grecia", 0);
+                PlayerPrefs.Save();
+                pabloGeral.liberado = true;
+                bookSeta.SetActive(true);
+                sceneStep = 2;
+
+            }
+        }
+        else
+        {
+            pabloGeral.liberado = true;
         }
     }
 }
