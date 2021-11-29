@@ -34,6 +34,8 @@ public class Gotica3Manager : MonoBehaviour
     public GameObject papel, camerazinha, painelFinal, tutorial, painelInicial, correto;
     public float velPapel, velCamera;
 
+    public GameObject linhas1, linhas2, linhas3, linhas4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +53,7 @@ public class Gotica3Manager : MonoBehaviour
         trocarSeis();
         clickVitral();
         ganhou();
+        Riscos();
 
         if (sceneStep == 0)
         {
@@ -91,6 +94,10 @@ public class Gotica3Manager : MonoBehaviour
             if (crono >= 3.5f)
             {
                 papel.GetComponent<Rigidbody2D>().velocity = new Vector2(velPapel, 0);
+                linhas1.GetComponent<Rigidbody2D>().velocity = new Vector2(velPapel, 0);
+                linhas2.GetComponent<Rigidbody2D>().velocity = new Vector2(velPapel, 0);
+                linhas3.GetComponent<Rigidbody2D>().velocity = new Vector2(velPapel, 0);
+                linhas4.GetComponent<Rigidbody2D>().velocity = new Vector2(velPapel, 0);
                 camerazinha.GetComponent<Rigidbody2D>().velocity = new Vector2(velCamera, 0);
                 if(camerazinha.transform.position.x<= -2.64f)
                 {
@@ -342,6 +349,59 @@ public class Gotica3Manager : MonoBehaviour
             
             trocarLiberado = false;
         }
+
+
+    }
+
+    void Riscos()
+    {
+        if(trocado4 == true)
+        {
+            linhas3.SetActive(true);
+        }
+        else
+        {
+            linhas3.SetActive(false);
+        }
+
+        if((trocado1==false && trocado5==false&& trocado6==false)||
+            (trocado3 == false && trocado5 == false && trocado6 == false)||
+            (trocado1 == true && trocado5 == true && trocado6 == true)||
+            (trocado1 == true && trocado6 == true && trocado3==false)||
+            (trocado1 == false && trocado6 == true && trocado3 == true && trocado5==true)
+
+            )
+        {
+            linhas4.SetActive(true);
+        }
+        else
+        {
+            linhas4.SetActive(false);
+        }
+
+        if((trocado4==true && trocado2==true &&trocado1==false && trocado5 ==false)||
+            (trocado4 == false && trocado2 ==false && trocado1 == true && trocado5 == true)||
+            (trocado4 == false && trocado2 == false && trocado1 == false && trocado5 == false)||
+            (trocado4 == true&& trocado2 == true && trocado1 == true && trocado5 == true))
+        {
+            linhas2.SetActive(false);
+        }
+        else
+        {
+            linhas2.SetActive(true);
+        }
+
+        if ((trocado2 == false && trocado3 == false) || (trocado2 == true && trocado3 == true) ||
+            (trocado5 == false && trocado6 == false) || (trocado5 == true && trocado6 == true))
+        {
+            linhas1.SetActive(false);
+
+        }
+        else
+        {
+            linhas1.SetActive(true);
+        }
+                
     }
 
 }
