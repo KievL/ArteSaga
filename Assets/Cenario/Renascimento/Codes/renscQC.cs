@@ -35,11 +35,26 @@ public class renscQC : MonoBehaviour
     public int acertos = 0;
 
     bool unlockGame = false;
+
+    public static AudioClip acertou;
+    bool acertouCheck = false;
+    public static AudioClip errou;
+    bool errouCheck = false;
+    static AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         fadeIn.SetActive(true);
         skiptut = false;
+        EmbaralharBlocos();
+        EmbaralharTextos();
+
+        acertou = Resources.Load<AudioClip>("acertou");
+        errou = Resources.Load<AudioClip>("errou");
+        audioSrc = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -669,11 +684,20 @@ public class renscQC : MonoBehaviour
         if (activateDelay == true)
         {
             cronoDelay += Time.deltaTime;
+            if (cronoDelay > 0.3f)
+            {
+                if (errouCheck == false)
+                {
+                    audioSrc.PlayOneShot(errou);
+                    errouCheck = true;
+                }
+            }
             if (cronoDelay >= 1f)
             {
                 closeBlocks();
                 activateDelay = false;
                 cronoDelay = 0f;
+                errouCheck = false;
             }
         }
     }
@@ -683,8 +707,16 @@ public class renscQC : MonoBehaviour
         if (ganhou == true)
         {
             cronoDelay += Time.deltaTime;
-            if (cronoDelay >= 1f)
+            if (cronoDelay > 0.3f)
             {
+                if (acertouCheck == false)
+                {
+                    audioSrc.PlayOneShot(acertou);
+                    acertouCheck = true;
+                }
+            }
+            if (cronoDelay >= 1f)
+            {                
                 if (blockOpen == 1)
                 {
                     block1.SetActive(false);
@@ -742,6 +774,7 @@ public class renscQC : MonoBehaviour
                 allowClickBlock = true;
                 allowClickTexts = true;
                 ganhou = false;
+                acertouCheck = false;
             }            
         }
     }
@@ -766,5 +799,53 @@ public class renscQC : MonoBehaviour
         backgroundPanel.SetActive(true);
         tutorial.SetActive(true);
         allowClicks = false;
+    }
+
+    void EmbaralharBlocos()
+    {        
+        GameObject[] blocos = { block1, block2, block3, block4, block5, block6, block7, block8, block9, block10 };
+
+        for (int i = 0; i < 10; i++){
+            GameObject obj = blocos[i];
+            int randomize = Random.Range(0, 10);
+            blocos[i] = blocos[randomize];
+            blocos[randomize] = obj;
+        }
+        
+        blocos[0].transform.position = new Vector3(-3.71f, -3.38f, 566.8516f);
+        blocos[1].transform.position = new Vector3(-1.84f, -3.38f, 566.8516f);
+        blocos[2].transform.position = new Vector3(0.04f, -3.38f, 566.8516f);
+        blocos[3].transform.position = new Vector3(1.94f, -3.38f, 566.8516f);
+        blocos[4].transform.position = new Vector3(3.77f, -3.38f, 566.8516f);
+        blocos[5].transform.position = new Vector3(-3.71f, -0.99f, 566.8516f);
+        blocos[6].transform.position = new Vector3(-1.84f, -0.99f, 566.8516f);
+        blocos[7].transform.position = new Vector3(0.04f, -0.99f, 566.8516f);
+        blocos[8].transform.position = new Vector3(1.94f, -0.99f, 566.8516f);
+        blocos[9].transform.position = new Vector3(3.77f, -0.99f, 566.8516f);        
+        
+    }
+    void EmbaralharTextos()
+    {
+        GameObject[] textos = { text1, text2, text3, text4, text5, text6, text7, text8, text9, text10 };
+
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject obj = textos[i];
+            int randomize = Random.Range(0, 10);
+            textos[i] = textos[randomize];
+            textos[randomize] = obj;
+        }
+
+        textos[0].transform.position = new Vector3(-3.71f, 1.39f, 566.8516f);
+        textos[1].transform.position = new Vector3(-1.84f, 1.39f, 566.8516f);
+        textos[2].transform.position = new Vector3(0.04f, 1.39f, 566.8516f);
+        textos[3].transform.position = new Vector3(1.94f, 1.39f, 566.8516f);
+        textos[4].transform.position = new Vector3(3.77f, 1.39f, 566.8516f);
+        textos[5].transform.position = new Vector3(-3.71f, 3.7f, 566.8516f);
+        textos[6].transform.position = new Vector3(-1.84f, 3.7f, 566.8516f);
+        textos[7].transform.position = new Vector3(0.04f, 3.7f, 566.8516f);
+        textos[8].transform.position = new Vector3(1.94f, 3.7f, 566.8516f);
+        textos[9].transform.position = new Vector3(3.77f, 3.7f, 566.8516f);
+
     }
 }

@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Cenario/Gotica/gotica3/gotica3.unity
     guid: 2ca816e2c5618ab4681f01e4d6bbc3fd
   - enabled: 1
+    path: Assets/Cenario/IdadeMedia/IdadeMedia.unity
+    guid: 6c774de1a3cb2bc4c8ae5d6eb7ccc19b
+  - enabled: 1
     path: Assets/Cenario/Renascimento/renasciRoom.unity
     guid: 74b7e5ef77be27542a0af7a9918ee6f3
   - enabled: 1

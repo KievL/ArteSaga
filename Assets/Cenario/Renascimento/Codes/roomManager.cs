@@ -36,10 +36,16 @@ public class roomManager : MonoBehaviour
     public float xDoor;
 
     public GameObject star, panelFinal, txtFinal;
+
+    public static AudioClip knockSound;
+    static AudioSource audioSrc;
+
+    bool playKnock = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        knockSound = Resources.Load<AudioClip>("knock");
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -125,7 +131,12 @@ public class roomManager : MonoBehaviour
         if (sceneStep == 4)
         {
             knock.SetActive(true);
-            //Som
+            if (playKnock == false)
+            {
+                audioSrc.PlayOneShot(knockSound);
+                playKnock = true;
+            }
+            
             crono += Time.deltaTime;
             if (crono >= 1.5f)
             {
@@ -329,7 +340,12 @@ public class roomManager : MonoBehaviour
                 panelFinal.SetActive(true);
                 if (crono >= 7f)
                 {
-                    //Sair para a sala dos portais
+                    PlayerPrefs.SetInt("renascStep", 0);
+                    PlayerPrefs.SetInt("RenascLivroStep",1);
+                    PlayerPrefs.SetInt("portalMedia", 2);
+                    SceneManager.LoadScene("IdadeMedia");
+                    PlayerPrefs.Save();
+                    
                 }
             }
         }        

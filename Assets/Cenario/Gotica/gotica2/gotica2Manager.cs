@@ -476,6 +476,13 @@ public class gotica2Manager : MonoBehaviour
                                 if (crono >= 4.8f)
                                 {
                                     panelFinal.SetActive(true);
+                                    if(crono>=6f){
+                                        SceneManager.LoadScene("IdadeMedia");
+                                        PlayerPrefs.SetInt("GoticaLivroStep", 1);
+                                        PlayerPrefs.SetInt("gotica", 0);
+                                        PlayerPrefs.SetInt("portalMedia", 1);
+                                        PlayerPrefs.Save();
+                                    }
                                 }
                             }
                         }

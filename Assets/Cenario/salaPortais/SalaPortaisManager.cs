@@ -10,6 +10,7 @@ public class SalaPortaisManager : MonoBehaviour
     public GameObject pablo;
     public int portal = 0;
     public int porta2 = 0;
+    public int porta3 = 0;
     public GameObject painelFinal;
     public float crono = 0;
     public bool mudarCena = false;
@@ -24,8 +25,7 @@ public class SalaPortaisManager : MonoBehaviour
     public bool ortCheck = false;
 
     public GameObject textPreHist;   
-    public GameObject textIdadeAntiga;
-
+    public GameObject textIdadeAntiga, textIdadeMedia;
 
     public GameObject fala;
     // Start is called before the first frame update
@@ -56,6 +56,15 @@ public class SalaPortaisManager : MonoBehaviour
             camera1.transform.position = new Vector3(0.1620926f, -0.466f, camera1.transform.position.z);
             camera1.GetComponent<Camera>().orthographicSize = 0.4006618f;
             pablo.transform.position = new Vector2(0.1987996f, -0.498f);
+            pablo.GetComponent<SpriteRenderer>().flipX = true;
+            SceneStep = 1;
+            PlayerPrefs.SetInt("dentroPreHist", 1);
+        }
+        if (PlayerPrefs.GetInt("dentroPreHist") == 4)
+        {
+            camera1.transform.position = new Vector3(1.19951f, -0.466f, camera1.transform.position.z);
+            camera1.GetComponent<Camera>().orthographicSize = 0.4006618f;
+            pablo.transform.position = new Vector2(1.3748f, -0.498f);
             pablo.GetComponent<SpriteRenderer>().flipX = true;
             SceneStep = 1;
             PlayerPrefs.SetInt("dentroPreHist", 1);
@@ -146,6 +155,10 @@ public class SalaPortaisManager : MonoBehaviour
             botaoEntrar.SetActive(true);
 
         }
+        else if (porta3 != 0)
+        {
+            botaoEntrar.SetActive(true);
+        }
         else
         {
             botaoEntrar.SetActive(false);
@@ -174,6 +187,16 @@ public class SalaPortaisManager : MonoBehaviour
             textIdadeAntiga.SetActive(false);
             porta2 = 0;
         }
+        if(pablo.transform.position.x >= 0.982f && pablo.transform.position.x <= 1.968f)
+        {
+            textIdadeMedia.SetActive(true);
+            porta3 = 1;
+        }
+        else
+        {
+            textIdadeMedia.SetActive(false);
+            porta3 = 0;
+        }
     }
     void MudarCenario()
     {
@@ -196,6 +219,14 @@ public class SalaPortaisManager : MonoBehaviour
                 SceneManager.LoadScene("idadeantiga");
             }
         }
+        if(mudarCena == true && porta3==1){
+            painelFinal.SetActive(true);
+            crono += Time.deltaTime;
+            if (crono >= 1f)
+            {
+                SceneManager.LoadScene("IdadeMedia");
+            }
+        }
     }
     public void EntrarSala()
     {
@@ -204,6 +235,10 @@ public class SalaPortaisManager : MonoBehaviour
             mudarCena = true;            
         }
         if (porta2 == 1)
+        {
+            mudarCena = true;
+        }
+        if (porta3 == 1)
         {
             mudarCena = true;
         }
