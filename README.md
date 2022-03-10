@@ -15,7 +15,7 @@ O ArteSaga é um jogo desenvolvido em projetos de pesquisa do IFRN Campus Parnam
 7. Não é necessário ser um profissional nem saber programar genuinamente na plataforma Unity para entrar no projeto. Um dos objetivos deste trabalho é justamente fazer os alunos programadores aprenderem e desenvolverem habilidades no desenvolvimento de jogos.
 8. A versão do Unity utilizada é a Unity 2019.3.0f5. No entanto, o projeto pode ser atualizado para versões mais recentes do Unity (recomendamos fazer isso).
 
-## Como fazer para ter acesso ao projeto
+## O que fazer para ter acesso ao projeto
 
 1. Tenha uma conta no GitHub e uma no Unity.
 2. Envie um email para skilledcrtns@gmail.com informando que quer acesso ao GitHub e ao projeto no Unity. No email, informe o seu nome de usuário do GitHub e o endereço de email cadastrado na conta do Unity.
