@@ -13,6 +13,7 @@ O ArteSaga é um jogo desenvolvido em projetos de pesquisa do IFRN Campus Parnam
 5. O jogo está publicado na plataforma Google Play Store (link: https://play.google.com/store/apps/details?id=com.SkilledCreations.ArteSaga&hl=pt_BR&gl=US). Se a equipe de desenvolvimento desejar publicar uma nova versão do jogo (atualizações, correção de bugs), deverá enviar um email para skilledcrtns@gmail.com fazendo a solicitação (basta dizer no email que quer atualizar o jogo na play store).
 6. Qualquer dúvida no desenvolvimento também poderá ser enviada para o email citado.
 7. Não é necessário ser um profissional nem saber programar genuinamente na plataforma Unity para entrar no projeto. Um dos objetivos deste trabalho é justamente fazer os alunos programadores aprenderem e desenvolverem habilidades no desenvolvimento de jogos.
+8. A versão do Unity utilizada é a Unity 2019.3.0f5. No entanto, o projeto pode ser atualizado para versões mais recentes do Unity (recomendamos fazer isso).
 
 ## Como fazer para ter acesso ao projeto
 
