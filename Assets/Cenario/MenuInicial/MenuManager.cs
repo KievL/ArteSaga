@@ -11,8 +11,6 @@ public class MenuManager : MonoBehaviour
     public bool botarPainel = false;
     public bool apertouBotao = false;
 
-    float cronoMusic = 0f;
-
     public static AudioClip intro;
     static AudioSource audioSrc;
 

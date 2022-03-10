@@ -46,7 +46,7 @@ public class Paleo3Manager : MonoBehaviour
 
     public float curTime = 0;
     public GameObject boi;
-    public GameObject camera;
+    public GameObject cameraScene;
     public GameObject finalPainel;
     public GameObject finalPainel2;
     public GameObject circulo;
@@ -197,8 +197,8 @@ public class Paleo3Manager : MonoBehaviour
 
             {
                 apagar = true;
-                camera.GetComponent<Camera>().orthographicSize = 0.9889882f;
-                camera.transform.position = new Vector3(4.83f, -2.24f, camera.transform.position.z);
+                cameraScene.GetComponent<Camera>().orthographicSize = 0.9889882f;
+                cameraScene.transform.position = new Vector3(4.83f, -2.24f, cameraScene.transform.position.z);
                 Time.timeScale = 1;
             }
             if(crono3>= 2.5f)
